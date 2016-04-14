@@ -1,0 +1,62 @@
+package main
+
+import (
+	"fmt"
+)
+
+func getValue(r int) (int, error) {
+	return r, nil
+}
+
+func display(i int, e error) {
+	fmt.Printf("(%v, %v)\n", i, e)
+}
+
+func main() {
+	// Start out with a nice assignment; since we want combined declaration &
+	// assignment use :=
+	foo := 1000
+	display(foo, nil) // print out the value; 1000 of course
+
+	if true {
+		// call a function that returns (int, error); since err isn't declared yet
+		// we use := for mixed declared and undeclared variables
+		foo, err := getValue(2000)
+		display(foo, err) // print out value; 2000 as expected
+	}
+
+	// lets check back in on foo for giggles
+	display(foo, nil) // wait... it is now 1000 again.
+
+	fmt.Printf("----\n\n\n")
+
+	// Okay. What's happening here is that := prefers to declare over assign
+	// variables. That means if you try to use it in a block it's going to shadow
+	// all your external variables.
+
+	// In order to maintain your previously declared variables you need to
+	// explicitly declare the block-scoped variables:
+
+	display(foo, nil) // still starting at 1000
+	if true {
+		var err error             // declare within the block
+		foo, err = getValue(3000) // now this is only assignment
+		display(foo, err)         // displays the expected 3000
+	}
+
+	// And now, because we didn't use := above, foo retains 3000
+	display(foo, nil)
+
+	fmt.Printf("----\n\n\n")
+
+	// This is surprising as typical, same-scope, use of := for declaration &
+	// assignment will actually have the expected behavior with the existing
+	// variable assigned and the new variable declared. This behavior is shown
+	// below.
+
+	baz := 1000 // declare a new variable
+	display(baz, nil)
+
+	baz, err := getValue(4000) // use := to for mixed declaration & assignment
+	display(baz, err)          // and baz is updated as expected
+}
