@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package main
+package golanggotchas_test
 
 import (
 	"fmt"
@@ -28,7 +28,7 @@ func display(i int, e error) {
 	fmt.Printf("(%v, %v)\n", i, e)
 }
 
-func main() {
+func Example_assignmentShadowing() {
 	// Start out with a nice assignment; since we want combined declaration &
 	// assignment use :=
 	foo := 1000
@@ -44,7 +44,7 @@ func main() {
 	// lets check back in on foo for giggles
 	display(foo, nil) // wait... it is now 1000 again.
 
-	fmt.Printf("----\n\n\n")
+	fmt.Println("----")
 
 	// Okay. What's happening here is that := prefers to declare over assign
 	// variables. That means if you try to use it in a block it's going to shadow
@@ -63,7 +63,7 @@ func main() {
 	// And now, because we didn't use := above, foo retains 3000
 	display(foo, nil)
 
-	fmt.Printf("----\n\n\n")
+	fmt.Println("----")
 
 	// This is surprising as typical, same-scope, use of := for declaration &
 	// assignment will actually have the expected behavior with the existing
@@ -75,4 +75,16 @@ func main() {
 
 	baz, err := getValue(4000) // use := to for mixed declaration & assignment
 	display(baz, err)          // and baz is updated as expected
+
+	// Output:
+	// (1000, <nil>)
+	// (2000, <nil>)
+	// (1000, <nil>)
+	// ----
+	// (1000, <nil>)
+	// (3000, <nil>)
+	// (3000, <nil>)
+	// ----
+	// (1000, <nil>)
+	// (4000, <nil>)
 }
