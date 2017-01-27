@@ -22,7 +22,7 @@ consumed from the [godoc](https://godoc.org/github.com/turbinelabs/golang-gotcha
 
 ## Requirements
 
-- Go 1.7.3 or later (previous versions may work, but we don't build or test against them)
+- Go 1.7.4 or later (previous versions may work, but we don't build or test against them)
 
 ## Dependencies
 
