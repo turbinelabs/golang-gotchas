@@ -16,6 +16,7 @@
 [![Apache 2.0](https://img.shields.io/hexpm/l/plug.svg)](LICENSE)
 [![GoDoc](https://godoc.org/github.com/turbinelabs/golang-gotchas?status.svg)](https://godoc.org/github.com/turbinelabs/golang-gotchas)
 [![CircleCI](https://circleci.com/gh/turbinelabs/golang-gotchas.svg?style=shield)](https://circleci.com/gh/turbinelabs/golang-gotchas)
+[![Go Report Card](https://goreportcard.com/badge/github.com/turbinelabs/golang-gotchas)](https://goreportcard.com/report/github.com/turbinelabs/golang-gotchasnonstdlib)
 
 The golang-gotchas project provides examples of some things that might feel
 awkward if you're coming to Go from other languages. These examples are best
