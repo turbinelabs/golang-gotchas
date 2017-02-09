@@ -14,7 +14,7 @@
 # turbinelabs/golang-gotchas
 
 [![Apache 2.0](https://img.shields.io/hexpm/l/plug.svg)](LICENSE)
-[![GoDoc](https://https://godoc.org/github.com/turbinelabs/golang-gotchas?status.svg)](https://https://godoc.org/github.com/turbinelabs/golang-gotchas)
+[![GoDoc](https://godoc.org/github.com/turbinelabs/golang-gotchas?status.svg)](https://godoc.org/github.com/turbinelabs/golang-gotchas)
 [![CircleCI](https://circleci.com/gh/turbinelabs/golang-gotchas.svg?style=shield)](https://circleci.com/gh/turbinelabs/golang-gotchas)
 
 The golang-gotchas project provides examples of some things that might feel
