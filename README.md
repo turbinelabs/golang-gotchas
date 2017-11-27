@@ -13,7 +13,7 @@
 
 # turbinelabs/golang-gotchas
 
-[![Apache 2.0](https://img.shields.io/hexpm/l/plug.svg)](LICENSE)
+[![Apache 2.0](https://img.shields.io/badge/license-apache%202.0-blue.svg)](LICENSE)
 [![GoDoc](https://godoc.org/github.com/turbinelabs/golang-gotchas?status.svg)](https://godoc.org/github.com/turbinelabs/golang-gotchas)
 [![CircleCI](https://circleci.com/gh/turbinelabs/golang-gotchas.svg?style=shield)](https://circleci.com/gh/turbinelabs/golang-gotchas)
 [![Go Report Card](https://goreportcard.com/badge/github.com/turbinelabs/golang-gotchas)](https://goreportcard.com/report/github.com/turbinelabs/golang-gotchas)
